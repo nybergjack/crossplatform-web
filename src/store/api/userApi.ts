@@ -29,16 +29,19 @@ export const usersApi = createApi({
 				method: 'POST', // PUT = modifiera data - DELETE = ta bort data
 				body: user
 			}),
+
 		}),
-    getUsers: builder.query({
-        query: ({}) => ({
-            baseUrl: '',
-            url: 'users',
-            method: 'GET',
-            body: ''
-        }),
-    })
+        getUsers: builder.query({
+            query: ({}) => ({
+                baseUrl: '',
+                url: 'users',
+                method: 'GET',
+                body: ''
+            }),
+        })
 	}),
 });
 
 export const { useCreateUserMutation } = usersApi;
+
+export const { useGetUsersQuery } = usersApi;
